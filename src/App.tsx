@@ -7,7 +7,7 @@ const App = () => {
   >([]);
   const [numSandwiches, setNumSandwiches] = useState(1);
 
-  const toppings = ["Roast beef", "Egg og avocado", "Skinka og tomat", "Piparspeigpylsa", "Hvítleksspeigpylsa", "Speigpylsa", "Livradeiggj", "Brieostur"];
+  const toppings = ["Roast beef", "Egg og avocado", "Skinka og tomat", "Piparspeigpylsa", "Hvítleksspeigpylsa", "Speigpylsa", "Livradeiggj", "Brieostur", "Egg", "Avokado"];
   const breads = ["Chiabreyð", "Fullkornsbreyð"];
   const condiments = ["Dijonaise", "Majones", "Grønt pesto", "Reytt pesto", "Remoláta"];
 
@@ -29,14 +29,14 @@ const App = () => {
 
   return (
     <div className="app">
-      <label htmlFor="num-sandwiches">Number of sandwiches:</label>
+      <label htmlFor="num-sandwiches">Tal av breyðflísum:</label>
       <input
         id="num-sandwiches"
         type="number"
         value={numSandwiches}
         onChange={(e) => setNumSandwiches(Number(e.target.value))}
       />
-      <button onClick={generateSandwiches}>Generate Sandwiches</button>
+      <button onClick={generateSandwiches}>Smyr breyðflísar</button>
       <div className="sandwiches">
         {sandwiches.map((sandwich, index) => (
           <div key={index} className="sandwich">
